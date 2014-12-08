@@ -3,10 +3,11 @@
 
 // This macro must be defined with the class and has to be called after every 
 // declaration of an instance of the class.
-#define set_ExClass(var)	{\
-	var.method1 = ExClass_method1;\
-	var.get1 = ExClass_get1;\
-}
+#define set_ExClass(var)\
+	do{\
+		var.method1 = ExClass_method1;\
+		var.get1 = ExClass_get1;\
+	}while(0)
 
 // class macro with the class_name to define it
 class (ExClass){
