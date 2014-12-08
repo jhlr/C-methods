@@ -8,7 +8,7 @@
 	var.get1 = ExClass_get1;\
 }
 
-// class macro with the class_name
+// class macro with the class_name to define it
 class (ExClass){
 	// Definition of attributes looks exactly like in structs but they must 
 	// come before the declaration of the methods.
