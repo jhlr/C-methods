@@ -1,15 +1,16 @@
 #ifndef _EXCLASS_H_
 #define _EXCLASS_H_
 
-// This macro must be defined with the class and has to be called after every 
-// declaration of an instance of the class.
+// It is important that a macro like this one is defined with the class.
+// It must be called after every declaration of an instance of the class. 
+// Surround it with do ... while() to avoid bugs.
 #define set_ExClass(var)\
 	do{\
 		var.method1 = ExClass_method1;\
 		var.get1 = ExClass_get1;\
 	}while(0)
 
-// class macro with the class_name to define it
+// 'class' macro with the class_name to define it
 class (ExClass){
 	// Definition of attributes looks exactly like in structs but they must 
 	// come before the declaration of the methods.
