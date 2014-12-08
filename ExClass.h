@@ -1,5 +1,6 @@
 #ifndef _EXCLASS_H_
 #define _EXCLASS_H_
+#include "simpleOO.h"
 
 // It is important that a macro like this one is defined with the class.
 // It must be called after every declaration of an instance of the class. 
