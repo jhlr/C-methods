@@ -4,8 +4,9 @@ C-simple-OO
 A library to add a very simple Object Orienting to C. Yet limited tools. <br>
 Just #include "simpleOO.h" <br>
 Have a look at ExClass and ExMain to learn the usage. <br>
+
+Already supports:
 <ul>
-  Already supports:
   <li> class attribute access </li>
   <li> self pointer </li>
   <li> method calls with arguments or not </li>
@@ -14,8 +15,8 @@ Have a look at ExClass and ExMain to learn the usage. <br>
   <li> static keyword </li>
 </ul>
 
+Developing:
 <ul>
-  Developing:
   <li> inheritance </li>
   <li> method override </li>
   <li> private methods </li>
