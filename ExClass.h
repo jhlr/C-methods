@@ -5,7 +5,7 @@
 // It is important that a macro like this one is defined with the class.
 // It must be called after every declaration of an instance of the class. 
 // Surround it with do-while(0) to avoid bugs.
-#define set_ExClass(var)\
+#define ExClass_set(var)\
 	do{\
 		var.method1 = ExClass_method1;\
 		var.get1 = ExClass_get1;\
