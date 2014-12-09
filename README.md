@@ -3,7 +3,52 @@ C-methods
 
 A library to add a very simple Object Orienting to C. Yet limited tools. <br>
 Just #include "methods.h" <br>
-Have a look at ExClass and ExMain to learn the usage. <br>
+
+<h3>Usage:</h3>
+```C
+#include "methods.h"
+
+// class declaration with the class keyword 
+class (SomeClass){
+  // attributes before methods
+  int attr1;
+  double attr2;
+  // method declaration like function pointer
+  int (*method1)(int, int);
+}
+
+// it is heavily advised to declare 
+// a macro like this.
+// it will help setting up the
+// instances a lot faster.
+// surround with do-while(0) to avoid bugs
+#define SomeClass_set(var)\
+  do{\
+    var.method1 = SomeClass_method1;\
+  }while(0)
+
+// method keyword to define methods outside the class
+int method (SomeClass, method1, int num1, int num2){
+  // self pointer
+  self->attr1 += num1 * num2;
+  return num1;
+}
+
+int main(){
+  // fast initializer to the values
+  SomeClass somevar = {35, 12};
+  SomeClass_set(somevar); // without this, the methods won't work
+  // different kind of method call
+  $(somevar, method1, 9, 11);
+  printf("%d\n", $(somevar, method1, 0, 3));
+  return 0;
+}
+
+
+// if( problems || sugestions ){
+//  send_email( jhlrietra@gmail.com );
+// }
+```
 
 Already supports:
 <ul>
