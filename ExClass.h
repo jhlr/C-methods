@@ -20,6 +20,9 @@ class (ExClass){
 	int (*method1)(ExClass*, int, int);
 	int (*get1)(ExClass*);
 };
+// This is completely optional:
+int method (ExClass, method1, int, int);
+
 
 // Definition of methods as:
 // [ret_type] method ([class_name], [method_name], [args...]){ [body] } 
