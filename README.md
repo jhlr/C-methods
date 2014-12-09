@@ -14,7 +14,8 @@ class (SomeClass){
   int attr1;
   double attr2;
   // method declaration like function pointer
-  int (*method1)(int, int);
+  // it is highly advised to put the first arg
+  int (*method1)(SomeClass*, int, int);
 }
 
 // it is heavily advised to declare 
@@ -28,6 +29,7 @@ class (SomeClass){
   }while(0)
 
 // method keyword to define methods outside the class
+// this will declar a function called SomeClass_method1
 int method (SomeClass, method1, int num1, int num2){
   // self pointer
   self->attr1 += num1 * num2;
@@ -40,6 +42,9 @@ int main(){
   SomeClass_set(somevar); // without this, the methods won't work
   // different kind of method call
   $(somevar, method1, 9, 11);
+  // is exactly the same as
+  somevar.method1(&somevar, 9, 11);
+  
   printf("%d\n", $(somevar, method1, 0, 3));
   return 0;
 }
