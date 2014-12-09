@@ -1,5 +1,5 @@
-#ifndef _SIMPLEOO_H_
-#define _SIMPLEOO_H_
+#ifndef _METHODS_H_
+#define _METHODS_H_
 
 #define class(class_name)\
 	typedef struct class_name class_name; struct class_name
