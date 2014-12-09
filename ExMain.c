@@ -7,7 +7,7 @@ int main (){
 	ExClass something = {1, 0};	
 	
 	// This will set the methods of something to the default
-	set_ExClass(something);
+	ExClass_set(something);
 	
 	// Calling attributes is simple 
 	something.attribute1 += 2;
