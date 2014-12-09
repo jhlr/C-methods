@@ -9,5 +9,7 @@
 	class_name ## _ ## meth_name (class_name *self VA1(args))
 #define $(inst, meth, args...)\
 	inst.meth(&inst VA1(args))
+#define _SET(class_name, var)\
+	void class_name ## _ ## set(class_name* var)
 
 #endif
