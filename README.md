@@ -13,8 +13,9 @@ class (SomeClass){
   // attributes before methods
   int attr1;
   double attr2;
-  // method declaration like function pointer
-  // it is highly advised to put the first arg
+  // Method declaration like function pointer.
+  // Highly advised to put the first arg, 
+  // it will pass the self pointer
   int (*method1)(SomeClass*, int, int);
 }
 
@@ -25,11 +26,11 @@ class (SomeClass){
 // surround with do-while(0) to avoid bugs
 #define SomeClass_set(var)\
   do{\
-    var.method1 = SomeClass_method1;\
+    var.method1 = _SomeClass_method1;\
   }while(0)
 
 // method keyword to define methods outside the class
-// this will declar a function called SomeClass_method1
+// this will declare a function called _SomeClass_method1
 int method (SomeClass, method1, int num1, int num2){
   // self pointer
   self->attr1 += num1 * num2;
@@ -54,6 +55,8 @@ int main(){
 //  send_email( jhlrietra@gmail.com );
 // }
 ```
+
+<h3>About:</h3>
 
 Already supports:
 <ul>
