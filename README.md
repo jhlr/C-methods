@@ -1,4 +1,4 @@
-C-simple-OO
+C-methods
 ===========
 
 A library to add a very simple Object Orienting to C. Yet limited tools. <br>
