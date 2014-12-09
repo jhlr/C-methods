@@ -6,6 +6,7 @@ Just #include "methods.h" <br>
 
 <h3>Usage:</h3>
 ```C
+#include <stdio.h>
 #include "methods.h"
 
 // class declaration with the class keyword 
@@ -17,7 +18,7 @@ class (SomeClass){
   // Highly advised to put the first arg, 
   // it will pass the self pointer
   int (*method1)(SomeClass*, int, int);
-}
+};
 
 // it is heavily advised to declare 
 // a macro like this.
