@@ -7,6 +7,8 @@
 	struct class_name 
 #define method(class_name, meth_name, args...)\
 	_ ## class_name ## _ ## meth_name (class_name *self , ## args)
+#define $$(class_name, inst, meth_name, args...)\
+	_ ## class_name ## _ ## meth_name (&inst, ## args)
 #define $(inst, meth, args...)\
 	inst.meth(&inst , ## args)
 
